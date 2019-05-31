@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item>
+      <ion-buttons bottom right>
+         <ion-icon name="arrow-back" (click)="viewhome()"  primary large> </ion-icon> 
+        </ion-buttons>
+    <ion-title>{{product}}</ion-title></ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+  <ion-slides pager="true">
+    <ion-slide>
+      <ion-img class="img" src="https://ucarecdn.com/{{imgurl1}}/{{img1}}"></ion-img>
+    </ion-slide>
+    <ion-slide>
+      <ion-img class="img" src="https://ucarecdn.com/{{imgurl2}}/{{img2}}"></ion-img>
+         </ion-slide>
+    <ion-slide>
+      <ion-img class="img" src="https://ucarecdn.com/{{imgurl3}}/{{img3}}"></ion-img>
+    </ion-slide>
+  </ion-slides>
+</div>
+<div>
+<ion-card>
+  <ion-card-header>
+   <ion-card-subtitle>{{product}}</ion-card-subtitle> 
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+<ion-label><b>Fiyat:</b> </ion-label><ion-label> {{price}} TL</ion-label>
+<br><br>
+<ion-label><b>Stok Miktarı:</b> </ion-label><ion-label> {{stock}} Adet</ion-label>
+<br><br>
+<ion-label><b>Cinsiyet:</b> </ion-label><ion-label> {{gender}}</ion-label>
+<br><br>
+<ion-label><b>Kategori:</b> </ion-label><ion-label> {{category}}</ion-label>
+ <br>
+ <br>
+ <ion-input type="number" [(ngModel)]="total" value=1 ><b>Adet: </b></ion-input>
+  <ion-buttons  ion-button icon-only >
+   
+  <ion-icon  color="danger" name="cart"  (click)="getCart()"  ></ion-icon></ion-buttons></ion-list>
+</ion-card-content>
+</ion-card>
+
+</div>
+</ion-content>

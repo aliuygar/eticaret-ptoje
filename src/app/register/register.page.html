@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="center">
+      <ion-list>
+          <div class=camera></div><br>
+          <ion-item>
+              <ion-label position="floating">
+                  Profil
+                </ion-label>
+                <ion-input type="file" *ngIf="!ImgUrl" class="filebtn" #filebtn (change)="fileChange($event)" ></ion-input>
+               <!-- <ion-button shape="round"  *ngIf="!ImgUrl" color="primary" fill="outline" click="resimYukle()"  >Profil Resmi</ion-button> -->
+                <ion-card>
+                  
+                <img *ngIf="ImgUrl"  src="https://ucarecdn.com/{{ImgUrl}}/{{pname}}">
+                </ion-card>
+              </ion-item>
+            
+            <ion-item>
+            <ion-label position="floating">
+              Email:
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="kullanici" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">
+              İsim:
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="isim" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">
+              Soyisim:
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="soyisim" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">
+              Telefon:
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="telefon" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">
+             Adres:
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="adres" ></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label position="floating">
+              Parola:
+            </ion-label>
+            <ion-input type="password" [(ngModel)]="parola" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">
+              Parola Tekrarı:
+            </ion-label>
+            <ion-input type="password" [(ngModel)]="tparola" ></ion-input>
+          </ion-item>
+          </ion-list>
+          <ion-button fill="solid" expanded="block"  color="dark"  (click)="signup()">Üye Ol</ion-button>
+  </div>
+ 
+    </ion-content>

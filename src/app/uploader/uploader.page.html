@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ürün Ekle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="center">
+    <ion-list>
+        <div class=camera></div><br>
+        <ion-item>
+            <ion-label position="floating">
+                Profil
+              </ion-label>
+              <ion-input type="file" *ngIf="!imgurl1" class="filebtn" #filebtn (change)="fileChange($event)" ></ion-input>
+              <ion-input type="file" *ngIf="!imgurl2" class="filebtn" #filebtn (change)="fileChange1($event)" ></ion-input>
+              <ion-input type="file" *ngIf="!imgurl3" class="filebtn" #filebtn (change)="fileChange2($event)" ></ion-input>
+             <!-- <ion-button shape="round"  *ngIf="!ImgUrl" color="primary" fill="outline" click="resimYukle()"  >Profil Resmi</ion-button> -->
+              <ion-card>
+                
+              <img *ngIf="imgurl1"  src="https://ucarecdn.com/{{imgurl1}}/{{img1}}">
+              </ion-card>
+              <ion-card>
+                
+                <img *ngIf="imgurl2"  src="https://ucarecdn.com/{{imgurl2}}/{{img2}}">
+                </ion-card>
+                <ion-card>
+                
+                  <img *ngIf="imgurl3"  src="https://ucarecdn.com/{{imgurl3}}/{{img3}}">
+                  </ion-card>
+            </ion-item>
+          
+          <ion-item>
+          <ion-label position="floating">
+            Ürün adı
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="productName" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+            Fiyat
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="price" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+            Stok
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="stock" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+           cinsiyet
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="gender" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">
+           kategori
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="category" ></ion-input>
+        </ion-item>
+               
+        </ion-list>
+        <ion-button fill="solid" expanded="block"  color="dark"  (click)="productAdd()">Üye Ol</ion-button>
+</div>
+
+  </ion-content>

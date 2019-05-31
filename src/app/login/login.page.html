@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Giriş</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+<ion-list>
+  <ion-item>
+    <ion-label position="floating">
+      Email:
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="kullanici" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">
+      Parola:
+    </ion-label>
+    <ion-input type="password" [(ngModel)]="parola" ></ion-input>
+  </ion-item>
+  </ion-list>
+  <ion-grid>
+  <ion-col size="6">
+  <ion-button fill="solid" expanded="block"  color="dark" (click)="login()">Giriş</ion-button>
+</ion-col>
+<ion-col size="6">
+  <ion-button fill="solid" expanded="block"  color="dark" (click)="getRegister()">Kayıt OL</ion-button>
+</ion-col></ion-grid>
+  </ion-content>
+  
+
+

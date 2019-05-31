@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div >
+  <div *ngFor="let profil of ((userPosts | async)?.profil)" >
+      <ion-list>
+        <div>
+          <img  src="https://ucarecdn.com/{{profil.resim}}/{{profil.proname}}">
+        </div>
+          <ion-item><ion-label>İsim:</ion-label>
+            <ion-label>{{profil.isim}}</ion-label>
+          </ion-item>
+          <ion-item>
+              <ion-label>Soyisim:</ion-label>
+            <ion-label>{{profil.soyisim}}</ion-label>
+          </ion-item>
+          <ion-item>
+              <ion-label>Telefon:</ion-label>
+            <ion-label>{{profil.telefon}}</ion-label>
+          </ion-item>
+          <ion-item>
+              <ion-label>Adres:</ion-label>
+            <ion-label>{{profil.adres}}</ion-label>
+          </ion-item>
+         
+        </ion-list>
+ 
+ 
+        
+      
+  
+  </div>
+  </div>
+  </ion-content>
+  

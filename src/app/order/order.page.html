@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons bottom right>
+          <ion-icon name="arrow-back" (click)="viewhome()"  primary large> </ion-icon> 
+         </ion-buttons>
+    <ion-title>Siparişler</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div *ngFor="let orders of ((getorder | async)?.order),let i = index">
+      <ion-card>
+         
+              
+             
+                
+                 
+  <ion-list>
+      <ion-item><b>İsim Soyisim:</b> {{orders.name}}  {{orders.surname}}</ion-item>
+      <ion-item><b>Telefon:</b> {{orders.phone}}</ion-item>
+      <ion-item><b>Sipariş Tarihi:</b> {{orders.date}}</ion-item>
+      
+     
+  </ion-list>
+  
+
+  
+   
+        
+      </ion-card>
+  
+  </div>
+ 
+  </ion-content>

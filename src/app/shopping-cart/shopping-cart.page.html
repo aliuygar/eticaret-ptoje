@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-item>
+      <ion-buttons bottom right>
+          <ion-icon  name="arrow-back" (click)="viewhome()"  primary large> </ion-icon> 
+         </ion-buttons>
+    <ion-title>Sepet</ion-title></ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngFor="let cart of ((addcart | async)?.cart),let i = index">
+    <ion-card>
+        <ion-card-header>
+            <ion-card-subtitle>{{cart.product}}</ion-card-subtitle>
+           
+              
+                           <ion-buttons class="icon">
+                <ion-icon name="remove"  color="danger" (click)="delete(cart,i)" ></ion-icon>
+              </ion-buttons>
+        </ion-card-header>
+      
+      <ion-card-content>
+          <ion-item>
+<ion-img src="https://ucarecdn.com/{{cart.imgurl1}}/{{cart.img1}}"></ion-img>
+<ion-list>
+    <ion-item><b>Fiyat:</b> {{cart.price}}</ion-item>
+    <ion-item><b>Cinsiyet:</b> {{cart.gender}}</ion-item>
+    <ion-item><b>Kategori:</b> {{cart.category}}</ion-item>
+    <ion-item><b>Adet:</b> {{cart.total}}</ion-item>
+   
+</ion-list>
+
+</ion-item>
+
+
+      </ion-card-content>
+      
+    </ion-card>
+
+</div>
+<ion-buttons class="icon" >
+<ion-icon  name="card" style="margin-right: 25px;" color="success" (click)="payment()"></ion-icon>
+</ion-buttons>
+</ion-content>

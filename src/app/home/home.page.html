@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let product of ((products | async)?.product); let i =index">
+    <div (click)="getDetails(product)">
+    <ion-list >
+      <ion-card class="card">
+        <ion-card-header>
+            <ion-card-subtitle>{{product.product}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-img  class="img" src="https://ucarecdn.com/{{product.imgurl1}}/{{product.img1}}"></ion-img>
+           <br>
+           <br>
+          <ion-label  >Fiyat :  {{product.price}} TL</ion-label>
+        </ion-card-content>
+          
+         
+         
+          
+            
+         
+      </ion-card>
+      
+    </ion-list>
+  </div>
+  </div>
+
+</ion-content>

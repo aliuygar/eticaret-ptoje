@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons bottom right>
+          <ion-icon name="arrow-back" (click)="viewhome()"  primary large> </ion-icon> 
+         </ion-buttons>
+    <ion-title>Satıl Al</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list style="margin:15px" >
+      <ion-item><ion-label><b>İsim:</b></ion-label><ion-input type="text" [(ngModel)]="name"></ion-input></ion-item>
+      <ion-item><ion-label><b>Soyisim:</b></ion-label><ion-input type="text" [(ngModel)]="surname"></ion-input></ion-item>
+      <ion-item><ion-label><b>Telefon:</b></ion-label><ion-input   type="text" [(ngModel)]="phone"> </ion-input></ion-item>
+      <ion-item><ion-label><b>Adres:</b></ion-label><ion-input type="text" [(ngModel)]="addres"></ion-input></ion-item>
+      <ion-item><ion-label><b>Kart No:</b></ion-label><ion-input type="number" [(ngModel)]="cardNo"></ion-input></ion-item>
+      <ion-item><ion-label><b>İşlem Tarihi:</b></ion-label><ion-input type="date" [(ngModel)]="date"></ion-input></ion-item>
+      <ion-item><ion-label><b>Güvenlik No:</b></ion-label><ion-input type="number "[(ngModel)]="scrNo"></ion-input></ion-item>
+      <br>
+      <ion-button backround-color=danger style="float: right" (click)="payment()" ><b>SATIN AL</b> </ion-button>
+  </ion-list>
+
+</ion-content>
